@@ -64,13 +64,13 @@ Created on : jan 05, 2016, 9:35:49 PM
                <br>
 
               <input type="button" name='zero' value='0' onclick="addZero()">
-              <input type="button" name='six' value='6' onclick="addSix()">
-              <input type="button" name='six' value='6' onclick="addSix()">
+              <input type="button" name='pluse' value='+' onclick="addPluse()">
+              <input type="button" name='clear' value='c' onclick="clearAll()">
 
                <br>
 
-              <input type="button" name='six' value='6' onclick="addSix()">
-              <input type="button" name='six' value='6' onclick="addSix()">
+              <input type="button" name='minus' value='-' onclick="addMinus()">
+              <input type="button" name='result' value='=' onclick="addresult()">
               <input type="button" name='cos' value='cos' onclick="addCos()">
                 <input type="button" name='sin' value='sin' onclick="addSin()">
                   <input type="button" name='six' value='6' onclick="addSix()">
@@ -141,34 +141,34 @@ Created on : jan 05, 2016, 9:35:49 PM
 
             }
 
-      function addZero(){
+      function addPluse(){
 
-                document.calculator.display.value +=0;
-
-
-            }
-
-            function addCos(){
-
-                document.calculator.display.value = cos;
+                document.calculator.display.value +="+";
 
 
             }
-            function addZero(){
 
-                document.calculator.display.value = sin;
-
-
-            }
             function addZero(){
 
                 document.calculator.display.value +=0;
 
 
             }
-            function addZero(){
+            function addMinus(){
 
-                document.calculator.display.value +=0;
+                document.calculator.display.value += "-";
+
+
+            }
+            function clearAll(){
+
+                document.calculator.display.value ="";
+
+
+            }
+            function addresult(){
+
+           var result = eva(document.calculator.display.value);document.calculator.display.value = result;
 
 
             }
