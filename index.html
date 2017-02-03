@@ -34,48 +34,83 @@ Created on : jan 05, 2016, 9:35:49 PM
           <!---calculator-->
 
 <div class="shakeen">
-
-
+<h2>Calculator</h2>
+<div class="shakin">
         <form name='calculator' readonly>
             
-        <h2>Calculator</h2>
+       
 
 
         <input name='display' readonly>
 
-         <br>
+        <hr>
+        	<input type="button" name='square' value="&radic;" onclick="SquareRoot()">
+        	<input type="button" name='back' value="&larr;" onclick="addBack()">
+<input type="button" name='percentage' value="%" onclick="addPercentage()">
 
-        <input type="button" name='one' value="1" onclick="addOne()">
-         <input type="button" name='two' value="2" onclick="addTwo()">
-          <input type="button" name='three' value="3" onclick="addThree()">
+        	<input type="button" name='clear' value='C' onclick="clearAll()">
 
-          <br>
+          	
 
-           <input type="button" name='four' value="4" onclick="addFour()">
+             <br>
+
+
+       		 <input type="button" name='one' value="1" onclick="addOne()">
+         	<input type="button" name='two' value="2" onclick="addTwo()">
+			<input type="button" name='three' value="3" onclick="addThree()">
+			<input type="button" name='four' value="4" onclick="addFour()">
+
+
+   <br>
+
             <input type="button" name='five' value="5" onclick="addFive()">
+
+  
+
              <input type="button" name='six' value="6" onclick="addSix()">
 
-              <br>
+            
 
               <input type="button" name='seven' value="7" onclick="addSeven()">
               <input type="button" name='eight' value="8" onclick="addEight()">
+
+   <br>
+
               <input type="button" name='nine' value="9" onclick="addNine()">
 
-               <br>
+
+                   
+
+             
 
               <input type="button" name='zero' value='0' onclick="addZero()">
-              <input type="button" name='pluse' value='+' onclick="addPluse()">
-              <input type="button" name='clear' value='c' onclick="clearAll()">
 
-               <br>
 
-              <input type="button" name='minus' value='-' onclick="addMinus()">
-              <input type="button" name='result' value='=' onclick="addresult()">
-              <input type="button" name='cos' value='cos' onclick="addCos()">
-                <input type="button" name='sin' value='sin' onclick="addSin()">
-                  <input type="button" name='six' value='6' onclick="addSix()">
 
+               <input type="button" name='result' value='=' onclick="addResult()">
+
+                
+
+
+
+              <input type="button" name='pluse' value='+' onclick="addPluse()" class="pluse">
+
+
+   <br>
+
+              <input type="button" name='minus' value='-' onclick="addMinus()" class="minus">
+             
+              <input type="button" name='multiplication' value='*' onclick="addMultiplication()" class="multiplication">
+
+
+              <input type="button" name='dot' value='.' onclick="addDot()" class="minus">
+
+
+              <input type="button" name='slash' value='/' onclick="addSlash()" class="minus">
+
+                  
         </form>
+    </div>
 
 </div>
             <script type="text/javascript">
@@ -160,15 +195,23 @@ Created on : jan 05, 2016, 9:35:49 PM
 
 
             }
+
+            function addMultiplication(){
+
+                document.calculator.display.value += "* ";
+
+
+            }
+
             function clearAll(){
 
                 document.calculator.display.value ="";
 
 
             }
-            function addresult(){
+            function addResult(){
 
-           var result = eva(document.calculator.display.value);document.calculator.display.value = result;
+           var result = eval(document.calculator.display.value);document.calculator.display.value = result;
 
 
             }
@@ -178,11 +221,39 @@ Created on : jan 05, 2016, 9:35:49 PM
 
 
             }
+                function addDot(){
+
+                document.calculator.display.value +=".";
 
 
+            }
+
+                function addSlash(){
+
+                document.calculator.display.value +="/";
 
 
+            }
 
+                function SquareRoot() {
+
+                document.calculator.display.value = Math.sqrt(calculator.display.value);
+
+
+            }
+                
+                    function addBack(){
+
+                document.calculator.display.value = calculator.display.value.slice (0,-1);
+
+
+            }
+                    function addPercentage(){
+
+                document.calculator.display.value +="%";
+
+
+            }
 
 
 
